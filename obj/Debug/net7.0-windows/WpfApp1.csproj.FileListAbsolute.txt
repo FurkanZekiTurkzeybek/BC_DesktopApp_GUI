@@ -19,3 +19,5 @@ D:\Programming\SourceCodes\_BC_read\DesktopApp\RiderDesktopAppTest\WpfApp1\obj\D
 D:\Programming\SourceCodes\_BC_read\DesktopApp\RiderDesktopAppTest\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.pdb
 D:\Programming\SourceCodes\_BC_read\DesktopApp\RiderDesktopAppTest\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.genruntimeconfig.cache
 D:\Programming\SourceCodes\_BC_read\DesktopApp\RiderDesktopAppTest\WpfApp1\obj\Debug\net7.0-windows\ref\WpfApp1.dll
+D:\Programming\SourceCodes\_BC_read\DesktopApp\RiderDesktopAppTest\WpfApp1\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+D:\Programming\SourceCodes\_BC_read\DesktopApp\RiderDesktopAppTest\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.csproj.CopyComplete

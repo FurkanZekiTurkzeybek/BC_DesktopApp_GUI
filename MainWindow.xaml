@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="10" Background = "Moccasin">
+    <Grid Margin="10" Background="DodgerBlue">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -22,16 +22,23 @@
         <TextBlock>Select Status</TextBlock>
         <ComboBox x:Name="statusBox" Grid.Row="0" Grid.Column="0" Height="25" Width="100"
                   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,50,5,5">
-            <ComboBoxItem x:Name="distressOpt" Content="Distress" Selected="distressedSelected"></ComboBoxItem>
-            <ComboBoxItem x:Name="aidOption" Content="Aid" Selected="aidSelected"></ComboBoxItem>
-            <ComboBoxItem x:Name="safeOption" Content="Safe" Selected="safeSelected"></ComboBoxItem>
+            <ComboBoxItem x:Name="distressOpt" Content="In Distress" Selected="distressedSelected"></ComboBoxItem>
+            <ComboBoxItem x:Name="aidOption" Content="Need Help" Selected="aidSelected"></ComboBoxItem>
+            <ComboBoxItem x:Name="safeOption" Content="Is Safe" Selected="safeSelected"></ComboBoxItem>
         </ComboBox>
         <Button x:Name="listButton" Grid.Row="0" Grid.Column="0" Height="25" Width="100"
                 HorizontalAlignment="Right" VerticalAlignment="Top" Margin="20,50,5,5"
-                Click="listClicked"> List
+                Click="listClicked">
+            List
         </Button>
 
         <!--Right column-->
-        <ListBox x:Name="outputList" Grid.Row="0" Grid.Column="1" Margin="25,10, 10,10"></ListBox>
+        <ListBox x:Name="outputList" Grid.Row="0" Grid.Column="1" Margin="25,10, 10,10">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
