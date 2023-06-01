@@ -96,12 +96,10 @@ namespace WpfApp1 {
         private String url = "http://localhost:3000/myFunction?param1=value1&param2=value2";
 
         private void listClicked(object sender, RoutedEventArgs e) {
+            outputList.Items.Clear();
             int statusVariable = getStatus();
 
 
-            //send this command to the JS code and execute the searching according to that
-            //after js search is done and print the resulting hashes and information to the window
-            test(statusVariable);
             string filePath = @"D:\Programming\SourceCodes\_BC_read\DesktopApp\read\output.json";
 
             try {
@@ -123,13 +121,14 @@ namespace WpfApp1 {
 
                 foreach (MyPerson person in jsonDataList) {
                     outputList.Items.Add(person.name + " || " + person.surname + " || " + person.address);
-                    // outputList.Items.Add(person.surname); 
                 }
             }
             catch (Exception exception) {
-                // MessageBox.Show("Error:" + exception.Message);
+                MessageBox.Show("Error:" + exception.Message);
                 throw;
             }
+            test(statusVariable);
+
         }
 
         private async void test(int pStatVariable) {

@@ -36,7 +36,7 @@
         <ListBox x:Name="outputList" Grid.Row="0" Grid.Column="1" Margin="25,10, 10,10">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding}"/>
+                    <TextBlock Text="{Binding}" />
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
