@@ -100,35 +100,7 @@ namespace WpfApp1 {
             int statusVariable = getStatus();
 
 
-            string filePath = @"D:\Programming\SourceCodes\_BC_read\DesktopApp\read\output.json";
-
-            try {
-                string json = File.ReadAllText(filePath);
-                // List<string> jsonDataList = new List<string> { json };
-                // outputList.ItemsSource = jsonDataList;
-
-                // List<String> dataList = JsonConvert.DeserializeObject<List<String>>(json);
-
-
-                List<MyPerson> jsonDataList = JsonConvert.DeserializeObject<List<MyPerson>>(json);
-                // MyPerson outputPerson = jsonDataList[0];
-                // MessageBox.Show(outputPerson.name);
-
-                // MyPerson outputPerson = JsonConvert.DeserializeObject<MyPerson>(json);
-                // string pName = outputPerson.name;
-                // outputList.ItemsSource = pName;
-
-
-                foreach (MyPerson person in jsonDataList) {
-                    outputList.Items.Add(person.name + " || " + person.surname + " || " + person.address);
-                }
-            }
-            catch (Exception exception) {
-                MessageBox.Show("Error:" + exception.Message);
-                throw;
-            }
             test(statusVariable);
-
         }
 
         private async void test(int pStatVariable) {
@@ -145,6 +117,7 @@ namespace WpfApp1 {
             url += "?" + queryString.ReadAsStringAsync().Result; //?
             HttpResponseMessage response = await client.PostAsync(url, queryString);
 
+
             if (response.IsSuccessStatusCode) {
                 String result = await response.Content.ReadAsStringAsync();
                 // MessageBox.Show(result);
@@ -152,6 +125,24 @@ namespace WpfApp1 {
 
             else {
                 MessageBox.Show("Cannot fetch the data");
+            }
+
+            string filePath = @"D:\Programming\SourceCodes\_BC_read\DesktopApp\read\output.json";
+
+            try {
+                string json = File.ReadAllText(filePath);
+
+
+                List<MyPerson> jsonDataList = JsonConvert.DeserializeObject<List<MyPerson>>(json);
+
+
+                foreach (MyPerson person in jsonDataList) {
+                    outputList.Items.Add(person.name + " || " + person.surname + " || " + person.address);
+                }
+            }
+            catch (Exception exception) {
+                MessageBox.Show("Error:" + exception.Message);
+                throw;
             }
         }
     }

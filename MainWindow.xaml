@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Disaster Management" Height="450" Width="800">
     <Grid Margin="10" Background="DodgerBlue">
 
         <Grid.RowDefinitions>
@@ -19,12 +19,12 @@
         </Grid.ColumnDefinitions>
 
         <!--Left column-->
-        <TextBlock>Select Status</TextBlock>
+        <TextBlock>Choose Status</TextBlock>
         <ComboBox x:Name="statusBox" Grid.Row="0" Grid.Column="0" Height="25" Width="100"
                   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,50,5,5">
-            <ComboBoxItem x:Name="distressOpt" Content="In Distress" Selected="distressedSelected"></ComboBoxItem>
+            <ComboBoxItem x:Name="distressOpt" Content="In distress" Selected="distressedSelected"></ComboBoxItem>
             <ComboBoxItem x:Name="aidOption" Content="Need Help" Selected="aidSelected"></ComboBoxItem>
-            <ComboBoxItem x:Name="safeOption" Content="Is Safe" Selected="safeSelected"></ComboBoxItem>
+            <ComboBoxItem x:Name="safeOption" Content="Safe" Selected="safeSelected"></ComboBoxItem>
         </ComboBox>
         <Button x:Name="listButton" Grid.Row="0" Grid.Column="0" Height="25" Width="100"
                 HorizontalAlignment="Right" VerticalAlignment="Top" Margin="20,50,5,5"
