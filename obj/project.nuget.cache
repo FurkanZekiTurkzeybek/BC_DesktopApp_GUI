@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "twYWR4XnV2l2N28aaRPQXyB/IuG81RGKZNqH8VqMl0cpgaxnxu/9TLq+K2ElDQH7fBOba4KbBAea/dZ7nkn/cg==",
+  "dgSpecHash": "VqR5uFB1h3S01LBoHeEtPT4DB/Hyh/64lEWH3YpVgzai8WCxBXI1VhSSvAnyD0YAEbJIFCkhiuDKqO85CpmhBQ==",
   "success": true,
   "projectFilePath": "D:\\Programming\\SourceCodes\\_BC_read\\DesktopApp\\RiderDesktopAppTest\\WpfApp1\\WpfApp1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\fztfr\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\fztfr\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\fztfr\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\fztfr\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\fztfr\\.nuget\\packages\\wpf-ui\\2.0.3\\wpf-ui.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

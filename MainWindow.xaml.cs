@@ -17,6 +17,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Newtonsoft.Json;
+using Wpf.Ui.Controls;
+using MessageBox = System.Windows.MessageBox;
 
 
 namespace WpfApp1 {
