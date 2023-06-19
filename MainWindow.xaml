@@ -8,7 +8,7 @@
         Title="Disaster Management" Height="450" Width="800">
     <Grid
 
-        Background="#1f7276">
+        Background="#0B2545">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -16,12 +16,13 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <!--Left column-->
         <Grid
+            Margin="0,18,0,0"
             Grid.Row="0" Grid.Column="0"
             Width="300"
             HorizontalAlignment="Left"
@@ -35,10 +36,12 @@
             </Grid.RowDefinitions>
 
             <TextBlock
+                FontFamily="Consolas"
+                Foreground="#EEF4ED"
                 Text="Choose a status"
                 VerticalAlignment="Stretch"
                 HorizontalAlignment="Center"
-                FontSize="25"/>
+                FontSize="25" />
 
             <!-- List box and buttons -->
             <Grid Grid.Row="1"
@@ -53,6 +56,9 @@
 
                 <Grid>
                     <ComboBox x:Name="statusBox"
+                              FontFamily="Consolas"
+                              Foreground="#EEF4ED"
+                              Background="#134074"
                               Grid.Row="0" Grid.Column="0" Height="Auto" Width="Auto"
                               HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,0,5">
                         <ComboBoxItem x:Name="distressOpt" Content="In distress" Selected="distressedSelected"></ComboBoxItem>
@@ -61,14 +67,15 @@
                     </ComboBox>
                 </Grid>
                 <Grid
-                    Grid.Row="0" Grid.Column="1"
-                    >
+                    Margin="12,0,12,0"
+                    Grid.Row="0" Grid.Column="1">
                     <Button x:Name="listButton"
+                            FontFamily="Consolas"
                             Height="Auto" Width="Auto"
-                            HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,5"
+                            HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,5"
                             Click="listClicked"
-                            Background="Beige"
-                            Foreground="Black"
+                            Background="#8DA9C4"
+                            Foreground="#0B2545"
                             Content="List">
 
                     </Button>
@@ -80,10 +87,11 @@
         <!--Right column-->
         <Grid Grid.Row="0" Grid.Column="1">
             <ListBox
-                x:Name="outputList" Grid.Row="0" Grid.Column="1" Margin="25,10, 10,10">
+                Background="#134074"
+                x:Name="outputList" Grid.Row="0" Grid.Column="1" Margin="0,10, 10,10">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding}" />
+                        <TextBlock Text="{Binding}" FontFamily="Consolas" FontSize="17" />
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
